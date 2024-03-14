@@ -11,7 +11,7 @@ class check {
     private void executeUpdate(String sql) throws SQLException {
         try {
             Class.forName("org.postgresql.Driver");
-            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+test.entry_no, "aditya", "Aditya@2002");
+            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+test.entry_no, "username", "password");
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
@@ -26,7 +26,7 @@ class check {
     private ResultSet executeQuery(String sql)  throws SQLException {
         try {
             Class.forName("org.postgresql.Driver");
-            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+test.entry_no, "aditya", "Aditya@2002");
+            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+test.entry_no, "username", "password");
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
